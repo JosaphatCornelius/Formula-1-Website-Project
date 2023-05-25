@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2021</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Domine&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Domine', serif;
+        }
+        html {
+            scroll-behavior: smooth;
+            transition-duration: 5s;
+        }
+        .landing {
+            width: fit-content;
+        }
+        .banner {
+            min-width: 100%;
+            min-height: 120vh;
+            height: auto;
+            width: auto;
+            background: url(./asset/Alo\ vs\ Ferrari.png) center no-repeat;
+            object-fit: cover;
+        }
+        .navbar {
+            padding-top: 11px;
+            margin-left: 35px;
+            display: flex;
+        }
+        .navbar1 {
+            padding-top: 11px;
+            margin-left: 35px;
+            display: flex;
+            margin-top: 0;
+        }
+        .footer {
+            background-color: #15151D;
+        }
+        .home,
+        .experiences,
+        .archives,
+        .forum,
+        .clock {
+            color: white;
+            font-weight: 700;
+            font-size: 25px;
+            margin-top: 50px;
+            margin: auto;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        .logo1 {
+            max-width: 135px;
+        }
+        .caption {
+            max-width: 800px;
+            margin-top: 90px;
+            margin-left: 13%;
+        }
+        .caption1 {
+            color: white;
+            font-size: 65px;
+            font-weight: 700;
+            max-width: 600px;
+        }
+        .container1 {
+            margin-top: 30px;
+            display: flex;
+            margin-left: 5px;
+        }
+        .leftRectangle,
+        .rightRectangle {
+            width: 55px;
+            height: 6px;
+            background-color: #E52C11;
+            margin-top: 13px;
+        }
+        .leftRectangle {
+            margin-right: 15px;
+        }
+        .rightRectangle {
+            margin-left: 15px;
+        }
+        .quotes1 {
+            color: white;
+            font-size: 25px;
+        }
+        @media (max-width: 900px){
+            .caption1 {
+                font-size: 35px;
+                max-width: 400px;
+            }
+            .home,
+            .experiences,
+            .archives,
+            .forum,
+            .clock {
+                font-size: 20px;
+            }
+            .quotes1 {
+                font-size: 20px;
+            }
+            .leftRectangle,
+            .rightRectangle {
+                width: 30px;
+                margin-top: 10px;
+            }
+            .logo1 {
+                max-width: 90px;
+            }
+        }
+        /* @media (max-width: 524px){
+            .home,
+            .experiences,
+            .archives,
+            .forum,
+            .clock {
+                font-size: 12px;
+            }
+            .logo1 {
+                max-width: 65px;
+            }
+            .caption1 {
+                font-size: 25px;
+            }
+            .quotes1 {
+                font-size: 12px;
+            }
+            .leftRectangle,
+            .rightRectangle {
+                width: 25px;
+                height: 3px;
+                margin-top: 5px;
+            }
+        } */
+        a:hover {
+            color: #E52C11;
+            transition-duration: 0.5s;
+        }
+        .content1 {
+            opacity: 0;
+            transition: opacity 1.3s ease-in-out;
+        }
+        .content1 {
+            margin-top: 300px;
+        }
+        .caption2 {
+            color: black;
+            text-align: center;
+            font-size: 45px;
+            font-weight: 700;
+        }
+        .caption3 {
+            margin-top: 40px;
+            font-size: 20px;
+            color: black;
+            text-align: center;
+            width: 810px;
+            margin: 20px auto;
+        }
+        .pitcrew {
+            max-width: 1002px;
+            margin: auto;
+            margin-top: 40px;
+        }
+        .willpit, 
+        .willpit1 {
+            height: 380px;
+        }
+        .willpit1 {
+            margin-left: 15px;
+        }
+        .rbpit {
+            margin-top: 15px;
+            height: 414px;
+        }
+        .ferrpit {
+            margin-left: 10px;
+            height: 414px;
+        }
+        @media (max-width: 1002px){
+            .willpit,
+            .willpit1 {
+                max-height: 340px;
+            }
+            .rbpit,
+            .ferrpit {
+                max-height: 370px;
+            }
+            .pitcrew {
+                width: fit-content;
+                margin-left: 4%;
+            }
+        }
+        @media (max-width: 970px){
+            .willpit,
+            .willpit1{
+                max-height: 330px;
+            }
+            .rbpit,
+            .ferrpit {
+                max-height: 359px;
+            }
+            .pitcrew {
+                margin-left: 4%;
+                max-width: fit-content;
+            }
+        }
+        @media (max-width: 907px){
+            .willpit,
+            .willpit1{
+                max-height: 315px;
+            }
+            .rbpit,
+            .ferrpit {
+                max-height: 344px;
+            }
+            .pitcrew {
+                margin-left: 4%;
+                max-width: fit-content;
+            }
+        }
+        @media (max-width: 857px){
+            .willpit,
+            .willpit1{
+                max-height: 280px;
+            }
+            .rbpit,
+            .ferrpit {
+                max-height: 306px;
+            }
+            .pitcrew {
+                margin-left: 4%;
+                max-width: fit-content;
+            }
+        }
+        .content2 {
+            opacity: 0;
+            transition: opacity 1.3s ease-in-out;
+            background-color: #15151D;
+            width: 100%;
+            display: inline-flex;
+            max-height: 200px;
+        }
+        .raceWeek1 {
+            min-width: 750px;
+        }
+        .container2 {
+            height: 0;
+        }
+        .caption4 {
+            height: 0;
+        }
+        .caption5 {
+            height: 0;
+        }
+        .quotes2 {
+            height: 0;
+        }
+        .content3 {
+            opacity: 0;
+            transition: opacity 1.3s ease-in-out;
+            margin-top: 450px;
+            width: 100%;
+            box-shadow: 30px 0px 30px 0px;
+        }
+        .introduction,
+        .introduction1 {
+            font-weight: 700;
+            font-size: 45px;
+        }
+        .kimiCamera,
+        .sebCamera {
+            width: 72%;
+        }
+        .kimiCamera {
+            margin-left: 20px;
+        }
+        .caption6,
+        .caption7 {
+            font-size: 23px;
+        }
+        .introduction {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .caption6 {
+            text-align: right;
+        }
+        .newCamera {
+            display: flex;
+            overflow: hidden;
+        }
+        .a {
+            margin-top: 80px;
+            height: 250px;
+            width: 320px;
+            margin-left: 50px;
+            margin-right: 40px;
+        }
+        .newCamera1 {
+            display: flex;
+            overflow: hidden;
+        }
+        .b {
+            margin-top: 80px;
+            width: 340px;
+            margin-left: 60px;
+        }
+        @media (max-width: 1232px){
+            .content2{
+                display: block;
+            }
+            .raceWeek1 {
+                min-width: 100%;
+            }
+            .quotes2 {
+                margin-top: 50px;
+                margin-left: 55%;
+            }
+            .introduction,
+            .introduction1 {
+                font-size: 28px;
+            }
+            .introduction1 {
+                padding-right: 12px;
+            }
+            .caption7 {
+                padding-right: 12px;
+            }
+            .caption6,
+            .caption7 {
+                font-size: 18px;
+            }
+            .b {
+                margin-left: 18px;
+            }
+        }
+        @media  (max-width: 838){
+            .introduction,
+            .introduction1 {
+                font-size: 23px;
+            }
+            .caption6,
+            .caption7 {
+                font-size: 13px;
+            }
+        }
+        .introduction1 {
+            margin-bottom: 20px;
+        }
+        .whereToFind {
+            margin-top: 80px;
+            font-size: 25px;
+            color: #E52C11;
+        }
+        .address {
+            font-size: 45px;
+            width: 500px;
+            margin-top: 15px;
+            color: white;
+        }
+        .slogan {
+            font-size: 45px;
+            text-align: right;
+            color: #E52C11;
+            margin-top: 20px;
+        }
+        .line {
+            margin-top: 20px;
+            background-color: #D9D9D9;
+            height: 5px;
+            width: 100%;
+        }
+        .copyright {
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+            height: 40px;   
+        }
+        .alamat {
+            margin-left: 30px;
+        }
+        .highlights {
+            position: relative;
+            border-right: solid 14px #E52C11;
+            border-top: solid 14px #E52C11;
+            margin-top: 15%;
+            margin-right: 5%;
+            margin-left: 5%;
+            padding: 10px;
+            border-top-right-radius: 20px;
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .raceHigh {
+            position: absolute;
+            top: -15px;
+            left: -5px;
+            font-size: 65px;
+            font-weight: 700;
+            z-index: 1;
+            background-color: white;
+            padding-right: 8%;
+        }
+        .img-2022,
+        .img-2021,
+        .img-2020,
+        .img-2019,
+        .img-2018,
+        .img-2017 {
+            max-width: 350px;
+        }
+        .img-2022:hover,
+        .img-2021:hover,
+        .img-2020:hover,
+        .img-2019:hover,
+        .img-2018:hover,
+        .img-2017:hover {
+            transform: scale(1.1);
+        }
+        .first-half {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            margin-top: 10%;
+        }
+        .second-half {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            margin-top: 5%;
+        }
+        @media (max-width: 1450px){
+            .raceHigh {
+                font-size: 45px
+            }
+            .img-2022,
+            .img-2021,
+            .img-2020,
+            .img-2019,
+            .img-2018,
+            .img-2017 {
+                max-width: 260px;
+            }
+        }
+        @media (max-width: 1110px){
+            .raceHigh {
+                font-size: 35px;
+            }
+            .img-2022,
+            .img-2021,
+            .img-2020,
+            .img-2019,
+            .img-2018,
+            .img-2017 {
+                max-width: 220px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="landing">
+        <div class="banner">
+            <div class="navbar">
+                <a href="https://www.youtube.com/formula1">
+                    <div class="logo"><img class="logo1" src="./asset/White Formula1 Logo.png" alt=""></div>
+                </a>
+                <div class="home"><a href="#caption2">Home</a></div>
+                <div class="experiences"><a href="experience.html">Experiences</a></div>
+                <div class="archives"><a href="archive.html">Archives</a></div>
+                <div class="forum"><a href="forum.html">Forum</a></div>
+                <div class="clock"></div>
+            </div>
+            <div class="caption">
+                <div class="caption1">The Formula 1™️ 2021 Archive</div>
+                <div class="container1">
+                    <div class="leftRectangle"></div>
+                    <div class="quotes1">"This is where the past lives on"</div>
+                    <div class="rightRectangle"></div>
+                </div>
+            </div>
+        </div>
+        <div class="highlights">
+            <div class="raceHigh" id="scroll">2021 Race Highlights</div>
+            <div class="gallery">
+                <div class="first-half">
+                    <a href="https://youtu.be/QuBlV0dixMo"><img class="img-2022" src="./asset/2021 Bahrain.jpg" alt="2022"></a>
+                    <a href="https://youtu.be/ds0BC8RDJ5o"><img class="img-2021" src="./asset/2021 Emilia Romagna.jpg" alt="2021"></a>
+                    <a href="https://youtu.be/-9-8gvYantk"><img class="img-2020" src="./asset/2021 Portuguese.jpg" alt="2020"></a>
+                </div>
+                <div class="second-half">
+                    <a href="https://youtu.be/HuLdJLB6sBo"><img class="img-2019" src="./asset/2021 Spanish.jpg" alt="2019"></a>
+                    <a href="https://youtu.be/GK5qm8AZ1dQ"><img class="img-2018" src="./asset/2021 Monaco.jpg" alt="2018"></a>
+                    <a href="https://youtu.be/suZHkUxPzjE"><img class="img-2017" src="./asset/2021 Azerbaijan.jpg" alt="2017"></a>
+                </div>
+            </div>
+        </div>
+        <div class="content2">
+            <img src="./asset/Race Week1.png" alt="" class="raceWeek1">
+            <div class="container2">
+                <div class="caption4">The Pinnacle of Motorsport</div>
+                <div class="caption5">For many years, Formula1™️ has been the highest and greatest racing event and still is. Providing inspiration for brands and people around the world. Making innovation and breakthroughs in the world of automotive and technology.</div>
+                <div class="quotes2">"Truly the pinnacle of motorsport"</div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="navbar1">
+                <div class="logo"><img class="logo1" src="./asset/White Formula1 Logo.png" alt=""></div>
+                <div class="home"><a href="#caption2">Home</a></div>
+                <div class="experiences"><a href="experience.html">Experiences</a></div>
+                <div class="archives"><a href="archive.html">Archives</a></div>
+                <div class="forum"><a href="forum.html">Forum</a></div>
+            </div>
+            <div class="alamat">
+                <div class="whereToFind">/ Where to find us?</div>
+                <div class="address">London, 2 St James's Market, United Kingdom</div>
+            </div>
+            <div class="slogan">#WeRaceAsOne</div>
+            <div class="line"></div>
+            <div class="copyright">Copyright ©2023 All rights reserved</div>
+        </div>
+    </div>
+
+    <script>
+        // creates a clock for HTML
+        function currentTime(){
+            // declares several variables for the clock
+            let date = new Date();
+            let hh = date.getHours();
+            let mm = date.getMinutes();
+            let ss = date.getSeconds();
+            let session = "AM";
+
+            // if hh is equals to 0, the value of hh will be changed to 12
+            if(hh == 0){
+                hh = 12;
+            }
+
+            // if hh is more than 12, the current value of hh will be deducted by 12, for example 13 AM will be deducted by 12, making it 1 PM
+            if(hh > 12){
+                hh = hh - 12;
+                session = "PM";
+            }
+
+            // if the value of the clock is lower than 10, a 0 will be added before the value/digit
+            hh = (hh < 10) ? "0" + hh : hh;
+            mm = (mm < 10) ? "0" + mm : mm;
+            ss = (ss < 10) ? "0" + ss : ss;
+
+            // declares a new time variable containing all the calculation that has been done
+            let time = hh + ":" + mm + ":" + ss + ":" + session;
+
+            // prints the result to HTML
+            document.getElementsByClassName("clock")[0].innerText = time;
+            
+            // creates a method to keep updating the clock by 1s
+            let t = setTimeout(function(){currentTime()}, 1000);
+        }
+
+        // calling the clock function
+        currentTime();
+    </script>
+</body>
+</html>
