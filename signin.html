@@ -70,7 +70,7 @@
             color: white;
             font-size: 20px;
             text-align: center;
-            margin-top: 15px;
+            margin-top: 8%;
             margin-left: 12px;
             margin-right: 12px;
         }
@@ -144,6 +144,10 @@
                 font-size: 10px;
             }
         }
+        a {
+            text-decoration: none;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -151,20 +155,16 @@
         <video autoplay muted loop class="video">
             <source src="./asset/The Top 10 Overtakes Of 2021!.mp4" type="video/mp4">
         </video>
-        <div class="container1">
-            <div class="signIn">Sign Up</div>
+        <form class="container1">
+            <div class="signIn">Sign In</div>
             <div class="user">Insert Your Username</div>
-            <input type="text" class="username" name="" id="" placeholder="Username">
-            <div class="email">Insert Your Email</div>
-            <input type="text" class="emailName" name="" id="" placeholder="Email">
+            <input type="text" class="username" placeholder="Username">
             <div class="pass">Insert Your Password</div>
-            <input type="password" class="password" name="" id="" placeholder="Password">
-            <a href="home.html">
-                <button onclick="sign()" class="logIn">Sign Up</button>
-            </a>
-            <div class="noAcc">Already Registererd?</div>   
-            <a href="signin.html" class="signUp">Sign In Now!</a>
-        </div>
+            <input type="password" class="password" placeholder="Password" autocomplete="on">
+            <button onclick="sign()" class="logIn"><a href="home.html">Sign In</a></button>
+            <div class="noAcc">Not Registererd Yet?</div>
+            <a href="signup.html" class="signUp">Sign Up Now!</a>
+        </form>
     </div>
 
     <script>
@@ -172,7 +172,6 @@
             // obtains the value from both username and password input
             let username = document.getElementsByClassName("username")[0].value;
             let password = document.getElementsByClassName("password")[0].value;
-            let email = document.getElementsByClassName("emailName")[0].value;
 
             function saveTextFile(filename, text) {
                 let element = document.createElement('a');
@@ -189,7 +188,7 @@
 
             // Example usage
             const filename = 'userInfo.txt';
-            const content = "Username Anda: " + username + " Email Anda: " + email + " Password Anda: " + password;
+            const content = "Username Anda: " + username + " Password Anda: " + password;
             saveTextFile(filename, content);
 
             alert("Welcome " + username + "!");
