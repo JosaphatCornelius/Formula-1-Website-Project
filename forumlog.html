@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experiences</title>
+    <title>Forum</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Domine&display=swap" rel="stylesheet">
@@ -30,7 +30,7 @@
             min-height: 120vh;
             height: auto;
             width: auto;
-            background: url(./asset/Racing.png) center no-repeat;
+            background: url(./asset/Max\ Vertappen\ Getting\ Out\ of\ His\ Car.png) center no-repeat;
             object-fit: cover;
         }
         .navbar {
@@ -74,7 +74,7 @@
             color: white;
             font-size: 65px;
             font-weight: 700;
-            max-width: 600px;
+            max-width: 700px;
         }
         .container1 {
             margin-top: 30px;
@@ -257,18 +257,33 @@
         }
         .raceWeek1 {
             min-width: 750px;
+            min-height: 100px;
         }
         .container2 {
-            height: 0;
+            margin-left: 30px;
         }
         .caption4 {
-            height: 0;
+            margin-top: 80px;
+            color: white;
+            font-size: 45px;
+            font-weight: 700;
+            width: fit-content;
         }
         .caption5 {
-            height: 0;
+            margin-top: 80px;
+            color: white;
+            font-size: 23px;
+            width: fit-content;
         }
         .quotes2 {
-            height: 0;
+            margin-top: 70px;
+            color: white;
+            font-size: 23px;
+            margin-left: 45%;
+            text-align: right;
+            width: fit-content;
+            padding-right: 50px;
+            padding-bottom: 25px;
         }
         .content3 {
             opacity: 0;
@@ -394,95 +409,86 @@
         .alamat {
             margin-left: 30px;
         }
-        .highlights {
-            position: relative;
-            border-top: solid 14px #E52C11;
-            margin-top: 15%;
-            margin-right: 5%;
-            margin-left: 5%;
-            padding: 10px;
-            min-height: 100%;
-            display: flex;
-            flex-direction: column;
+        .forum1,
+        .forum2,
+        .forum3 {
+            width: 80%;
+            transition: all 0.5s ease-in-out;
+            margin-left: 10%;
         }
-        .raceHigh {
-            position: absolute;
-            top: -15px;
-            left: -5px;
-            font-size: 65px;
-            font-weight: 700;
-            z-index: 1;
-            background-color: white;
-            padding-right: 8%;
-        }
-        .img-2022,
-        .img-2021,
-        .img-2020,
-        .img-2019,
-        .img-2018,
-        .img-2017 {
-            max-width: 350px;
-        }
-        .first-half {
-            display: flex;
-            justify-content: space-evenly;
+        .forums {
+            margin-top: 30%;
+            opacity: 0;
+            transition: opacity 1.3s ease-in-out;
+            box-shadow: 30px 0px 30px 0px;
+            padding-top: 5%;
             width: 100%;
-            margin-top: 10%;
+            padding-bottom: 10%;
         }
-        @media (max-width: 1450px){
-            .raceHigh {
-                font-size: 45px
-            }
-            .img-2022,
-            .img-2021,
-            .img-2020,
-            .img-2019,
-            .img-2018,
-            .img-2017 {
-                max-width: 260px;
-            }
+        .caption2 {
+            font-size: 50px;
+            font-weight: 700;
+            text-align: center;
+            width: fit-content;
+            margin: 0 auto 5% auto;
         }
-        @media (max-width: 1110px){
-            .raceHigh {
+        .images {
+            display: flex;
+        }
+        .forum1:hover {
+            content: url(./asset/Lewis\ vs\ Max1.png);
+            transform: scale(1.1);
+        }
+        .forum2:hover {
+            content: url(./asset/Mercedes\ Card1.png);
+            transform: scale(1.1);
+        }
+        .forum3:hover {
+            content: url(./asset/Ferrari\ Card1.png);
+            transform: scale(1.1);
+        }
+        .more {
+            margin-top: 30%;
+            display: flex;
+            width: 100%;
+        }
+        .rectangle1 {
+            width: 100%;
+            height: 25px;
+            background-color: #E52C11;
+        }
+        .rectangle2 {
+            width: 100%;
+            height: 25px;
+            background-color: #E52C11;
+        }
+        .rectangle1,
+        .rectangle2 {
+            margin-top: 20px;
+        }
+        .moreToCome {
+            font-size: 50px;
+            font-weight: 700;
+            text-align: center;
+            min-width: 380px;
+        }
+        @media (max-width: 1024px){
+            .forum1,
+            .forum2,
+            .forum3 {
+                max-width: 310px;
+            }
+            .caption2 {
                 font-size: 35px;
             }
-            .img-2022,
-            .img-2021,
-            .img-2020,
-            .img-2019,
-            .img-2018,
-            .img-2017 {
-                max-width: 220px;
+            .moreToCome {
+                font-size: 35px;
+                min-width: 300px;
             }
-        }
-        .pertama,
-        .kedua,
-        .ketiga {
-            display: block;
-            background-color: #15151D;
-            border-bottom-right-radius: 20px;
-            border-bottom-left-radius: 20px;
-        }
-        .pertama:hover,
-        .kedua:hover,
-        .ketiga:hover {
-            background-color: #E52C11;
-            transition: all 0.3s ease-in-out;
-        }
-        .azerbaijan23,
-        .bahrain23,
-        .us23 {
-            font-size: 30px;
-            font-weight: 700;
-            color: white;
-            text-align: center;
-            padding: 20%;
-        }
-        @media (max-width: 1000px){
-            .azerbaijan23,
-            .bahrain23,
-            .us23 {
-                font-size: 20px;
+            .rectangle1,
+            .rectangle2 {
+                height: 12px;
+                margin-top: 12px;
             }
         }
     </style>
@@ -494,58 +500,53 @@
                 <a href="https://www.youtube.com/formula1">
                     <div class="logo"><img class="logo1" src="./asset/White Formula1 Logo.png" alt=""></div>
                 </a>
-                <div class="home"><a href="index.html">Home</a></div>
-                <div class="experiences"><a href="#scroll">Experiences</a></div>
-                <div class="archives"><a href="archive.html">Archives</a></div>
-                <div class="forum"><a href="forum.html">Forum</a></div>
-                <div class="clock"><a href="signin.html">Sign In</a></div>
+                <div class="home"><a href="indexlog.html">Home</a></div>
+                <div class="experiences"><a href="experiencelog.html">Experiences</a></div>
+                <div class="archives"><a href="archivelog.html">Archives</a></div>
+                <div class="forum"><a href="#caption2">Forum</a></div>
+                <div class="clock"><a href="index.html" onclick="yes()">Logout</a></div>
             </div>
             <div class="caption">
-                <div class="caption1">The Formula 1™️ Experiences</div>
+                <div class="caption1">The Formula 1™️ Official Forum</div>
                 <div class="container1">
                     <div class="leftRectangle"></div>
-                    <div class="quotes1">"The closest you can get to Formula 1™️"</div>
+                    <div class="quotes1">"Really looking forward for your next innovation"</div>
                     <div class="rightRectangle"></div>
                 </div>
             </div>
         </div>
-        <div class="highlights">
-            <div class="raceHigh" id="scroll">Available Tickets</div>
-            <div class="gallery">
-                <div class="first-half">
-                    <div class="pertama">
-                        <img class="img-2022" src="./asset/Azerbaijan 2023.png" alt="2022">
-                        <div class="azerbaijan23">Unavailable</div>
-                    </div>
-                    <div class="kedua">
-                        <img class="img-2021" src="./asset/Bahrain 2023.png" alt="2021">
-                        <div class="bahrain23">Unavailable</div>
-                    </div>
-                    <div class="ketiga">
-                        <a href="miami.html"><img class="img-2020" src="./asset/United States 2023.png" alt="2020">
-                        <div class="us23">Available</div></a> 
-                    </div>
-                </div>
+        <div class="forums">
+            <div class="caption2" id="caption2">Popular Discussions</div>
+            <div class="images">
+                <a href="forum1log.html">
+                    <img src="./asset/Lewis vs Max.png" class="forum1" alt="">
+                </a>
+                <a href="forum2log.html">
+                    <img src="./asset/Mercedes Card.png" class="forum2" alt="">
+                </a>
+                <a href="forum3log.html">
+                    <img src="./asset/Ferrari Card.png" class="forum3" alt="">
+                </a>
             </div>
+        </div>
+        <div class="more">
+            <div class="rectangle1"></div>
+            <div class="moreToCome">More to Come</div>
+            <div class="rectangle2"></div>
         </div>
         <div class="content2">
             <img src="./asset/Race Week1.png" alt="" class="raceWeek1">
-            <div class="container2">
-                <div class="caption4">The Pinnacle of Motorsport</div>
-                <div class="caption5">For many years, Formula1™️ has been the highest and greatest racing event and still is. Providing inspiration for brands and people around the world. Making innovation and breakthroughs in the world of automotive and technology.</div>
-                <div class="quotes2">"Truly the pinnacle of motorsport"</div>
-            </div>
         </div>
         <div class="footer">
             <div class="navbar1">
                 <a href="https://www.youtube.com/formula1">
                     <div class="logo"><img class="logo1" src="./asset/White Formula1 Logo.png" alt=""></div>
                 </a>
-                <div class="home"><a href="index.html">Home</a></div>
-                <div class="experiences"><a href="#scroll">Experiences</a></div>
-                <div class="archives"><a href="archive.html">Archives</a></div>
-                <div class="forum"><a href="forum.html">Forum</a></div>
-                <div class="clock"><a href="signin.html">Sign In</a></div>
+                <div class="home"><a href="indexlog.html">Home</a></div>
+                <div class="experiences"><a href="experiencelog.html">Experiences</a></div>
+                <div class="archives"><a href="archivelog.html">Archives</a></div>
+                <div class="forum"><a href="#caption2">Forum</a></div>
+                <div class="clock"><a href="index.html" onclick="yes()">Logout</a></div>
             </div>
             <div class="alamat">
                 <div class="whereToFind">/ Where to find us?</div>
@@ -558,6 +559,26 @@
     </div>
 
     <script>
+        // function to alert the user that they have successfully logout
+        function yes(){
+            alert("You have successfully logged out");
+        }
+
+        // Get the scroll content element
+        const scrollContent = document.querySelector('.forums');
+
+        // Listen for the scroll event on the window object
+        window.addEventListener('scroll', () => {
+        // Check if the scroll content is within the viewport
+        const scrollContentRect = scrollContent.getBoundingClientRect();
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+        const isVisible = scrollContentRect.top <= windowHeight && scrollContentRect.bottom >= 0;
+
+        // If the scroll content is visible, display it
+        if (isVisible) {
+            scrollContent.style.opacity = 1;
+        }
+        });
     </script>
 </body>
 </html>

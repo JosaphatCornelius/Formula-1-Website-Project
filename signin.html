@@ -18,7 +18,6 @@
             margin: 0;
             font-family: 'Domine', serif;
             background-color: black;
-            overflow-x: hidden;
         }
         .video-container {
             position: fixed;
@@ -52,7 +51,7 @@
             align-items: center;
             background-color: #15151D;
             min-width: 30%;
-            min-height: 68vh;
+            min-height: 56vh;
             z-index: 1;
             border-radius: 10px;
         }
@@ -65,18 +64,16 @@
             text-align: center;
         }
         .user,
-        .pass,
-        .email {
+        .pass {
             color: white;
             font-size: 20px;
-            text-align: center;
             margin-top: 15px;
+            text-align: center;
             margin-left: 12px;
             margin-right: 12px;
         }
         .username,
-        .password,
-        .emailName {
+        .password {
             border-radius: 15px;
             margin-top: 20px;
             width: 70%;
@@ -89,16 +86,15 @@
         }
         .noAcc {
             margin-top: 30px;
-            color: white;
             text-align: center;
+            color: white;
         }
         .signUp {
             color: #E52C11;
             margin-top: 5%;
             text-decoration: none;
-            width: 100%;
             text-align: center;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
         .logIn {
             background-color: #15151D;
@@ -152,18 +148,16 @@
             <source src="./asset/The Top 10 Overtakes Of 2021!.mp4" type="video/mp4">
         </video>
         <div class="container1">
-            <div class="signIn">Sign Up</div>
+            <div class="signIn">Sign In</div>
             <div class="user">Insert Your Username</div>
             <input type="text" class="username" name="" id="" placeholder="Username">
-            <div class="email">Insert Your Email</div>
-            <input type="text" class="emailName" name="" id="" placeholder="Email">
             <div class="pass">Insert Your Password</div>
             <input type="password" class="password" name="" id="" placeholder="Password">
             <a href="indexlog.html">
-                <button onclick="sign()" class="logIn">Sign Up</button>
+                <button onclick="sign()" class="logIn">Sign In</button>
             </a>
-            <div class="noAcc">Already Registererd?</div>   
-            <a href="signin.html" class="signUp">Sign In Now!</a>
+            <div class="noAcc">Not Registered Yet?</div>
+            <a href="signup.html" class="signUp">Sign Up Now!</a>
         </div>
     </div>
 
@@ -172,7 +166,6 @@
             // obtains the value from both username and password input
             let username = document.getElementsByClassName("username")[0].value;
             let password = document.getElementsByClassName("password")[0].value;
-            let email = document.getElementsByClassName("emailName")[0].value;
 
             function saveTextFile(filename, text) {
                 let element = document.createElement('a');
@@ -189,7 +182,7 @@
 
             // Example usage
             const filename = 'userInfo.txt';
-            const content = "Username Anda: " + username + " Email Anda: " + email + " Password Anda: " + password;
+            const content = "Username Anda: " + username + " Password Anda: " + password;
             saveTextFile(filename, content);
 
             alert("Welcome " + username + "!");

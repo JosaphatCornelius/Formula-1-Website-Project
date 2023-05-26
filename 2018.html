@@ -480,11 +480,11 @@
                 <a href="https://www.youtube.com/formula1">
                     <div class="logo"><img class="logo1" src="./asset/White Formula1 Logo.png" alt=""></div>
                 </a>
-                <div class="home"><a href="home.html">Home</a></div>
+                <div class="home"><a href="index.html">Home</a></div>
                 <div class="experiences"><a href="experience.html">Experiences</a></div>
                 <div class="archives"><a href="archive.html">Archives</a></div>
                 <div class="forum"><a href="forum.html">Forum</a></div>
-                <div class="clock"></div>
+                <div class="clock"><a href="signin.html">Sign In</a></div>
             </div>
             <div class="caption">
                 <div class="caption1">The Formula 1™️ 2018 Archive</div>
@@ -520,11 +520,14 @@
         </div>
         <div class="footer">
             <div class="navbar1">
-                <div class="logo"><img class="logo1" src="./asset/White Formula1 Logo.png" alt=""></div>
-                <div class="home"><a href="home.html">Home</a></div>
+                <a href="https://www.youtube.com/formula1">
+                    <div class="logo"><img class="logo1" src="./asset/White Formula1 Logo.png" alt=""></div>
+                </a>
+                <div class="home"><a href="index.html">Home</a></div>
                 <div class="experiences"><a href="experience.html">Experiences</a></div>
                 <div class="archives"><a href="archive.html">Archives</a></div>
                 <div class="forum"><a href="forum.html">Forum</a></div>
+                <div class="clock"><a href="signin.html">Sign In</a></div>
             </div>
             <div class="alamat">
                 <div class="whereToFind">/ Where to find us?</div>
@@ -537,43 +540,7 @@
     </div>
 
     <script>
-        // creates a clock for HTML
-        function currentTime(){
-            // declares several variables for the clock
-            let date = new Date();
-            let hh = date.getHours();
-            let mm = date.getMinutes();
-            let ss = date.getSeconds();
-            let session = "AM";
 
-            // if hh is equals to 0, the value of hh will be changed to 12
-            if(hh == 0){
-                hh = 12;
-            }
-
-            // if hh is more than 12, the current value of hh will be deducted by 12, for example 13 AM will be deducted by 12, making it 1 PM
-            if(hh > 12){
-                hh = hh - 12;
-                session = "PM";
-            }
-
-            // if the value of the clock is lower than 10, a 0 will be added before the value/digit
-            hh = (hh < 10) ? "0" + hh : hh;
-            mm = (mm < 10) ? "0" + mm : mm;
-            ss = (ss < 10) ? "0" + ss : ss;
-
-            // declares a new time variable containing all the calculation that has been done
-            let time = hh + ":" + mm + ":" + ss + ":" + session;
-
-            // prints the result to HTML
-            document.getElementsByClassName("clock")[0].innerText = time;
-            
-            // creates a method to keep updating the clock by 1s
-            let t = setTimeout(function(){currentTime()}, 1000);
-        }
-
-        // calling the clock function
-        currentTime();
     </script>
 </body>
 </html>

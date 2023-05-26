@@ -491,7 +491,7 @@
         }
         .buying {
             color: white;
-            font-size: 30px;
+            font-size: 25px;
             font-weight: 700;
             background-color: #15151D;
             width: fit-content;
@@ -499,10 +499,33 @@
             border-radius: 15px;
             margin: 10% auto 0 auto;
         }
+        .amount {
+            width: fit-content;
+            margin: 4% auto 0 auto;
+            font-size: 25px;
+            border: 2px solid #E52C11;
+            border-radius: 10px;
+            padding: 1.3% 1% 1.3% 1%;
+            text-align: center;
+            color: white;
+            background-color: #15151D;
+        }
+        .total {
+            margin-top: 10%;
+            font-size: 30px;
+            font-weight: 700;
+            text-align: center;
+        }
         @media (max-width: 1000px){
+            .total {
+                font-size: 22px;
+            }
             .buying {
                 font-size: 20px;
             }
+        }
+        ::placeholder {
+            color: white;
         }
     </style>
 </head>
@@ -513,11 +536,11 @@
                 <a href="https://www.youtube.com/formula1">
                     <div class="logo"><img class="logo1" src="./asset/White Formula1 Logo.png" alt=""></div>
                 </a>
-                <div class="home"><a href="home.html">Home</a></div>
+                <div class="home"><a href="index.html">Home</a></div>
                 <div class="experiences"><a href="experience.html">Experiences</a></div>
                 <div class="archives"><a href="archive.html">Archives</a></div>
                 <div class="forum"><a href="forum.html">Forum</a></div>
-                <div class="clock"></div>
+                <div class="clock"><a href="signin.html">Sign In</a></div>
             </div>
             <div class="caption">
                 <div class="caption1">The Formula 1™️ Experiences</div>
@@ -531,7 +554,9 @@
         <div class="highlights">
             <div class="raceHigh" id="scroll">2023 Miami Grand Prix</div>
             <img src="./asset/Miami Circuit.png" class="circuit" alt="">
-            <a href="payment.html" class="buying">Buy Now!</a>
+            <div class="total">Amount of Tickets Will Be Bought (1 Seat Cost 5000$)</div>
+            <input type="number" name="" id="" placeholder="Number of Tickets" class="amount">
+            <a href="payment.html" class="buying" onclick="money()">Buy Now!</a>
         </div>
         <div class="content2">
             <img src="./asset/Race Week1.png" alt="" class="raceWeek1">
@@ -543,11 +568,14 @@
         </div>
         <div class="footer">
             <div class="navbar1">
-                <div class="logo"><img class="logo1" src="./asset/White Formula1 Logo.png" alt=""></div>
-                <div class="home"><a href="home.html">Home</a></div>
+                <a href="https://www.youtube.com/formula1">
+                    <div class="logo"><img class="logo1" src="./asset/White Formula1 Logo.png" alt=""></div>
+                </a>
+                <div class="home"><a href="index.html">Home</a></div>
                 <div class="experiences"><a href="experience.html">Experiences</a></div>
                 <div class="archives"><a href="archive.html">Archives</a></div>
                 <div class="forum"><a href="forum.html">Forum</a></div>
+                <div class="clock"><a href="signin.html">Sign In</a></div>
             </div>
             <div class="alamat">
                 <div class="whereToFind">/ Where to find us?</div>
@@ -560,43 +588,12 @@
     </div>
 
     <script>
-        // creates a clock for HTML
-        function currentTime(){
-            // declares several variables for the clock
-            let date = new Date();
-            let hh = date.getHours();
-            let mm = date.getMinutes();
-            let ss = date.getSeconds();
-            let session = "AM";
-
-            // if hh is equals to 0, the value of hh will be changed to 12
-            if(hh == 0){
-                hh = 12;
-            }
-
-            // if hh is more than 12, the current value of hh will be deducted by 12, for example 13 AM will be deducted by 12, making it 1 PM
-            if(hh > 12){
-                hh = hh - 12;
-                session = "PM"; 
-            }
-
-            // if the value of the clock is lower than 10, a 0 will be added before the value/digit
-            hh = (hh < 10) ? "0" + hh : hh;
-            mm = (mm < 10) ? "0" + mm : mm;
-            ss = (ss < 10) ? "0" + ss : ss;
-
-            // declares a new time variable containing all the calculation that has been done
-            let time = hh + ":" + mm + ":" + ss + ":" + session;
-
-            // prints the result to HTML
-            document.getElementsByClassName("clock")[0].innerText = time;
-            
-            // creates a method to keep updating the clock by 1s
-            let t = setTimeout(function(){currentTime()}, 1000);
+        function money(){
+            let tickets = document.getElementsByClassName("amount")[0].value;
+            let price = 5000;
+            let total = price * tickets;
+            alert("Amount of tickets: " + tickets + " You have to pay: " + total + "$");
         }
-
-        // calling the clock function
-        currentTime();
     </script>
 </body>
 </html>
